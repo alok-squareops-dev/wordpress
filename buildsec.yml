@@ -1,0 +1,18 @@
+  
+version: 0.2
+env:
+  parameter-store:
+    DB_Name: /alok/DB_NAME
+    UserName: /alok/DB_USER
+    Password: /alok/DB_PASSWORD
+    Host: /alok/DB_HOST
+phases:
+    build:
+       commands:
+         - sed -i 's/database_name_here/'$DB_Name'/' wp-config.php 
+         - sed -i 's/username_here/'$UserName'/' wp-config.php
+         - sed -i 's/password_here/'$Password'/' wp-config.php
+         - sed -i 's/localhost/'$Host'/' wp-config.php
+artifacts:
+  files:
+    - '**/*'
