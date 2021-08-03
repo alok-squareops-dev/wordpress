@@ -1,3 +1,4 @@
 #!/bin/bash
-sudo chmod -R 755 /var/www/html/wp-content
-sudo chown -R www-data:www-data /var/www/html/wp-content
+chmod -R 755 /var/www/html/
+chmod -R 755 /var/www/html/wp-content
+chown -R www-data:www-data /var/www/html/wp-content
