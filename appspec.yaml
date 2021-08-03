@@ -1,0 +1,14 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /var/www/html/
+hooks:
+  ApplicationStart:
+     - location: Scripts/start-server.sh
+       timeout: 300
+       runas: ubuntu
+  AfterInstall:
+     - location: Scripts/after-wp-installation.sh
+       timeout: 300
+       runas: ubuntu
