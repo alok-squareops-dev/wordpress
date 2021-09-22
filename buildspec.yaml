@@ -2,10 +2,10 @@
 version: 0.2
 env:
   parameter-store:
-    DB_Name: /alok/DB_NAME
-    UserName: /alok/DB_USER
-    Password: /alok/DB_PASSWORD
-    Host: /alok/DB_HOST
+    DB_Name: hello
+    UserName: hello
+    Password: hello
+    Host: hello
 phases:
     build:
        commands:
