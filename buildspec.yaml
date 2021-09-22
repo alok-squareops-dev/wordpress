@@ -3,7 +3,10 @@ version: 0.2
 phases:
     build:
        commands:
-         - apt update
+         - |
+           if [! git --git-dir="/dir/.git" diff --quiet]; then 
+           apt update;
+           fi
          
 artifacts:
   files:
